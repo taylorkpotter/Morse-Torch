@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D75D3F6118FC90F1006E888F /* ring.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D75D3F6018FC90F1006E888F /* ring.jpg */; };
+		D75D3F6318FC9153006E888F /* test.png in Resources */ = {isa = PBXBuildFile; fileRef = D75D3F6218FC9153006E888F /* test.png */; };
 		D77A0BAB18FC813300E7C2EF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D77A0BAA18FC813300E7C2EF /* Foundation.framework */; };
 		D77A0BAD18FC813300E7C2EF /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D77A0BAC18FC813300E7C2EF /* CoreGraphics.framework */; };
 		D77A0BAF18FC813300E7C2EF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D77A0BAE18FC813300E7C2EF /* UIKit.framework */; };
@@ -21,6 +23,7 @@
 		D77A0BCC18FC813400E7C2EF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D77A0BAE18FC813300E7C2EF /* UIKit.framework */; };
 		D77A0BD418FC813400E7C2EF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D77A0BD218FC813400E7C2EF /* InfoPlist.strings */; };
 		D77A0BD618FC813400E7C2EF /* MorseTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D77A0BD518FC813400E7C2EF /* MorseTests.m */; };
+		D77A0BE018FC822500E7C2EF /* ios-linen.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D77A0BDF18FC822500E7C2EF /* ios-linen.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +37,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D75D3F6018FC90F1006E888F /* ring.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ring.jpg; sourceTree = "<group>"; };
+		D75D3F6218FC9153006E888F /* test.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = test.png; sourceTree = "<group>"; };
 		D77A0BA718FC813300E7C2EF /* Morse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Morse.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D77A0BAA18FC813300E7C2EF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D77A0BAC18FC813300E7C2EF /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -47,12 +52,13 @@
 		D77A0BBD18FC813300E7C2EF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D77A0BBF18FC813300E7C2EF /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		D77A0BC018FC813300E7C2EF /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		D77A0BC218FC813300E7C2EF /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		D77A0BC218FC813300E7C2EF /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = ../Morse/Images.xcassets; sourceTree = "<group>"; };
 		D77A0BC818FC813400E7C2EF /* MorseTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MorseTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D77A0BC918FC813400E7C2EF /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		D77A0BD118FC813400E7C2EF /* MorseTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MorseTests-Info.plist"; sourceTree = "<group>"; };
 		D77A0BD318FC813400E7C2EF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		D77A0BD518FC813400E7C2EF /* MorseTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MorseTests.m; sourceTree = "<group>"; };
+		D77A0BDF18FC822500E7C2EF /* ios-linen.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "ios-linen.jpg"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,9 +89,6 @@
 			isa = PBXGroup;
 			children = (
 				D77A0BB018FC813300E7C2EF /* Morse */,
-				D77A0BCF18FC813400E7C2EF /* MorseTests */,
-				D77A0BA918FC813300E7C2EF /* Frameworks */,
-				D77A0BA818FC813300E7C2EF /* Products */,
 			);
 			sourceTree = "<group>";
 		};
@@ -96,6 +99,7 @@
 				D77A0BC818FC813400E7C2EF /* MorseTests.xctest */,
 			);
 			name = Products;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		D77A0BA918FC813300E7C2EF /* Frameworks */ = {
@@ -107,18 +111,15 @@
 				D77A0BC918FC813400E7C2EF /* XCTest.framework */,
 			);
 			name = Frameworks;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		D77A0BB018FC813300E7C2EF /* Morse */ = {
 			isa = PBXGroup;
 			children = (
-				D77A0BB918FC813300E7C2EF /* AppDelegate.h */,
-				D77A0BBA18FC813300E7C2EF /* AppDelegate.m */,
-				D77A0BBC18FC813300E7C2EF /* Main.storyboard */,
-				D77A0BBF18FC813300E7C2EF /* ViewController.h */,
-				D77A0BC018FC813300E7C2EF /* ViewController.m */,
-				D77A0BC218FC813300E7C2EF /* Images.xcassets */,
-				D77A0BB118FC813300E7C2EF /* Supporting Files */,
+				D77A0BE318FC828200E7C2EF /* model */,
+				D77A0BE118FC823A00E7C2EF /* controller */,
+				D77A0BE218FC824A00E7C2EF /* view */,
 			);
 			path = Morse;
 			sourceTree = "<group>";
@@ -137,11 +138,12 @@
 		D77A0BCF18FC813400E7C2EF /* MorseTests */ = {
 			isa = PBXGroup;
 			children = (
+				D77A0BC218FC813300E7C2EF /* Images.xcassets */,
 				D77A0BD518FC813400E7C2EF /* MorseTests.m */,
 				D77A0BD018FC813400E7C2EF /* Supporting Files */,
 			);
 			path = MorseTests;
-			sourceTree = "<group>";
+			sourceTree = SOURCE_ROOT;
 		};
 		D77A0BD018FC813400E7C2EF /* Supporting Files */ = {
 			isa = PBXGroup;
@@ -150,6 +152,39 @@
 				D77A0BD218FC813400E7C2EF /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D77A0BE118FC823A00E7C2EF /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				D77A0BBF18FC813300E7C2EF /* ViewController.h */,
+				D77A0BC018FC813300E7C2EF /* ViewController.m */,
+				D77A0BB918FC813300E7C2EF /* AppDelegate.h */,
+				D77A0BBA18FC813300E7C2EF /* AppDelegate.m */,
+			);
+			name = controller;
+			sourceTree = "<group>";
+		};
+		D77A0BE218FC824A00E7C2EF /* view */ = {
+			isa = PBXGroup;
+			children = (
+				D75D3F6218FC9153006E888F /* test.png */,
+				D75D3F6018FC90F1006E888F /* ring.jpg */,
+				D77A0BBC18FC813300E7C2EF /* Main.storyboard */,
+				D77A0BDF18FC822500E7C2EF /* ios-linen.jpg */,
+				D77A0BB118FC813300E7C2EF /* Supporting Files */,
+				D77A0BA818FC813300E7C2EF /* Products */,
+				D77A0BA918FC813300E7C2EF /* Frameworks */,
+				D77A0BCF18FC813400E7C2EF /* MorseTests */,
+			);
+			name = view;
+			sourceTree = "<group>";
+		};
+		D77A0BE318FC828200E7C2EF /* model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -229,8 +264,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				D77A0BC318FC813300E7C2EF /* Images.xcassets in Resources */,
+				D75D3F6118FC90F1006E888F /* ring.jpg in Resources */,
 				D77A0BB518FC813300E7C2EF /* InfoPlist.strings in Resources */,
+				D77A0BE018FC822500E7C2EF /* ios-linen.jpg in Resources */,
 				D77A0BBE18FC813300E7C2EF /* Main.storyboard in Resources */,
+				D75D3F6318FC9153006E888F /* test.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -456,6 +494,7 @@
 				D77A0BDB18FC813400E7C2EF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D77A0BDC18FC813400E7C2EF /* Build configuration list for PBXNativeTarget "MorseTests" */ = {
 			isa = XCConfigurationList;
@@ -464,6 +503,7 @@
 				D77A0BDE18FC813400E7C2EF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

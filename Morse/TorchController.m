@@ -13,7 +13,6 @@
 @interface TorchController ()
 
 @property (strong, nonatomic) AVCaptureDevice *myDevice;
-@property (strong, nonatomic) NSOperationQueue *flashQueue;
 @property (strong, nonatomic) NSString *morseLetter;
 
 @end
@@ -28,7 +27,6 @@
   
   return self;
 }
-
 
 -(void)flashDot
 {
@@ -66,32 +64,36 @@
 }
 
 -(void)translatingToMorse:(NSString *)messageToTranslate
-
 {
+  [self.flashQueue addOperationWithBlock:^{
+      [self.delegate enableUIElements:YES];
+  }];
+  
   NSArray *translatedArray = [NSString translateMessageToMorse:messageToTranslate];
   
-  for (_morseLetter in translatedArray) {
-  
+  for (NSString *symbolLetter in translatedArray) {
+    _morseLetter = symbolLetter;
+    [self.flashQueue addOperationWithBlock:^{
+      
+      CGFloat progress = (CGFloat)[translatedArray indexOfObject:symbolLetter] / (CGFloat)translatedArray.count;
+      
+      [self.delegate sendingLetter:symbolLetter withProgress:progress];
+    }];
     for(int i=0; i<_morseLetter.length; i++) {
       NSString *letter = [_morseLetter substringWithRange:NSMakeRange(i, 1)];
-      
       if ([letter isEqualToString:@"."]) {
         [self.flashQueue addOperationWithBlock:^{
-//          [self.sendButton setEnabled:NO];
           [self flashDot];
         }];
       } else if ([letter isEqualToString:@"-"]) {
-//        [self.sendButton setEnabled:NO];
         [self.flashQueue addOperationWithBlock:^{
           [self flashDash];
         }];
       } else if ([letter isEqualToString:@" "]) {
-//        [self.sendButton setEnabled:NO];
         [self.flashQueue addOperationWithBlock:^{
           [self flashLetterSpace];
         }];
         [self.flashQueue addOperationWithBlock:^{
-//          [self.sendButton setEnabled:NO];
           [self flashLetterSpace];
         }];
         
@@ -99,7 +101,10 @@
     }
     
   }
-  
+  [self.flashQueue addOperationWithBlock:^{
+    [self.delegate enableUIElements:NO];
+  }];
+
 }
 
 @end

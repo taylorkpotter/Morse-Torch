@@ -8,7 +8,18 @@
 
 #import <Foundation/Foundation.h>
 
+@protocol TorchControllerDelegate <NSObject>
+
+-(void)sendingLetter:(NSString *)letter withProgress:(CGFloat)progress;
+-(void)enableUIElements:(BOOL)enabled;
+
+
+@end
+
 @interface TorchController : NSObject
+@property(unsafe_unretained, nonatomic)id<TorchControllerDelegate> delegate;
+@property (strong, nonatomic) NSOperationQueue *flashQueue;
+
 
 -(instancetype)initWithDevice;
 

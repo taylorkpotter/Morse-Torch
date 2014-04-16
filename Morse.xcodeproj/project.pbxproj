@@ -24,6 +24,10 @@
 		D77A0BD418FC813400E7C2EF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D77A0BD218FC813400E7C2EF /* InfoPlist.strings */; };
 		D77A0BD618FC813400E7C2EF /* MorseTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D77A0BD518FC813400E7C2EF /* MorseTests.m */; };
 		D77A0BE018FC822500E7C2EF /* ios-linen.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D77A0BDF18FC822500E7C2EF /* ios-linen.jpg */; };
+		D79EE1FB18FDAD0A004A6D15 /* customButton.png in Resources */ = {isa = PBXBuildFile; fileRef = D79EE1FA18FDAD0A004A6D15 /* customButton.png */; };
+		D7B6D7A618FE4AC1004BD388 /* TorchFlasher.m in Sources */ = {isa = PBXBuildFile; fileRef = D7B6D7A518FE4AC1004BD388 /* TorchFlasher.m */; };
+		D7D9156E18FDB6E80049A8FC /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7D9156D18FDB6E80049A8FC /* AVFoundation.framework */; };
+		D7D9157118FDC4D30049A8FC /* NSString+morseCode.m in Sources */ = {isa = PBXBuildFile; fileRef = D7D9157018FDC4D30049A8FC /* NSString+morseCode.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +63,12 @@
 		D77A0BD318FC813400E7C2EF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		D77A0BD518FC813400E7C2EF /* MorseTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MorseTests.m; sourceTree = "<group>"; };
 		D77A0BDF18FC822500E7C2EF /* ios-linen.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "ios-linen.jpg"; sourceTree = "<group>"; };
+		D79EE1FA18FDAD0A004A6D15 /* customButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = customButton.png; sourceTree = "<group>"; };
+		D7B6D7A418FE4AC1004BD388 /* TorchFlasher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TorchFlasher.h; sourceTree = "<group>"; };
+		D7B6D7A518FE4AC1004BD388 /* TorchFlasher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TorchFlasher.m; sourceTree = "<group>"; };
+		D7D9156D18FDB6E80049A8FC /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		D7D9156F18FDC4D30049A8FC /* NSString+morseCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+morseCode.h"; sourceTree = "<group>"; };
+		D7D9157018FDC4D30049A8FC /* NSString+morseCode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+morseCode.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D7D9156E18FDB6E80049A8FC /* AVFoundation.framework in Frameworks */,
 				D77A0BAD18FC813300E7C2EF /* CoreGraphics.framework in Frameworks */,
 				D77A0BAF18FC813300E7C2EF /* UIKit.framework in Frameworks */,
 				D77A0BAB18FC813300E7C2EF /* Foundation.framework in Frameworks */,
@@ -88,6 +99,7 @@
 		D77A0B9E18FC813300E7C2EF = {
 			isa = PBXGroup;
 			children = (
+				D7D9156D18FDB6E80049A8FC /* AVFoundation.framework */,
 				D77A0BB018FC813300E7C2EF /* Morse */,
 			);
 			sourceTree = "<group>";
@@ -159,6 +171,8 @@
 			children = (
 				D77A0BBF18FC813300E7C2EF /* ViewController.h */,
 				D77A0BC018FC813300E7C2EF /* ViewController.m */,
+				D7B6D7A418FE4AC1004BD388 /* TorchFlasher.h */,
+				D7B6D7A518FE4AC1004BD388 /* TorchFlasher.m */,
 				D77A0BB918FC813300E7C2EF /* AppDelegate.h */,
 				D77A0BBA18FC813300E7C2EF /* AppDelegate.m */,
 			);
@@ -168,6 +182,7 @@
 		D77A0BE218FC824A00E7C2EF /* view */ = {
 			isa = PBXGroup;
 			children = (
+				D79EE1FA18FDAD0A004A6D15 /* customButton.png */,
 				D75D3F6218FC9153006E888F /* test.png */,
 				D75D3F6018FC90F1006E888F /* ring.jpg */,
 				D77A0BBC18FC813300E7C2EF /* Main.storyboard */,
@@ -183,6 +198,8 @@
 		D77A0BE318FC828200E7C2EF /* model */ = {
 			isa = PBXGroup;
 			children = (
+				D7D9156F18FDC4D30049A8FC /* NSString+morseCode.h */,
+				D7D9157018FDC4D30049A8FC /* NSString+morseCode.m */,
 			);
 			name = model;
 			sourceTree = "<group>";
@@ -267,6 +284,7 @@
 				D75D3F6118FC90F1006E888F /* ring.jpg in Resources */,
 				D77A0BB518FC813300E7C2EF /* InfoPlist.strings in Resources */,
 				D77A0BE018FC822500E7C2EF /* ios-linen.jpg in Resources */,
+				D79EE1FB18FDAD0A004A6D15 /* customButton.png in Resources */,
 				D77A0BBE18FC813300E7C2EF /* Main.storyboard in Resources */,
 				D75D3F6318FC9153006E888F /* test.png in Resources */,
 			);
@@ -289,7 +307,9 @@
 			files = (
 				D77A0BC118FC813300E7C2EF /* ViewController.m in Sources */,
 				D77A0BBB18FC813300E7C2EF /* AppDelegate.m in Sources */,
+				D7B6D7A618FE4AC1004BD388 /* TorchFlasher.m in Sources */,
 				D77A0BB718FC813300E7C2EF /* main.m in Sources */,
+				D7D9157118FDC4D30049A8FC /* NSString+morseCode.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

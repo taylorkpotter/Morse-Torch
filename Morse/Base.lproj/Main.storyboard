@@ -13,64 +13,56 @@
                         <viewControllerLayoutGuide type="bottom" id="NqJ-Mb-c4n"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
-                        <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" alpha="0.80000000000000004" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ios-linen.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="Y8B-sx-H1w" userLabel="bg image">
-                                <rect key="frame" x="0.0" y="-9" width="568" height="329"/>
+                                <rect key="frame" x="0.0" y="-9" width="320" height="489"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="90p-dU-Mwm" userLabel="translateTextField">
-                                <rect key="frame" x="20" y="109" width="528" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter a message to translate" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="90p-dU-Mwm" userLabel="translateTextField">
+                                <rect key="frame" x="20" y="110" width="280" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="'A'" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rfu-vV-VNw" userLabel="currentLetterLabel">
-                                <rect key="frame" x="255" y="20" width="59" height="60"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rfu-vV-VNw" userLabel="currentLetterLabel">
+                                <rect key="frame" x="140" y="20" width="41" height="60"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="50"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="test.png" translatesAutoresizingMaskIntoConstraints="NO" id="Bqf-Lv-vr2" userLabel="buttonRingImage">
-                                <rect key="frame" x="227" y="169" width="115" height="115"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lk0-c8-ZMC" userLabel="buttonSendLabel">
+                                <rect key="frame" x="100" y="329" width="120" height="120"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="115" id="0H5-C1-oP6"/>
-                                    <constraint firstAttribute="width" constant="115" id="Ab5-mO-zZV"/>
-                                </constraints>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lk0-c8-ZMC" userLabel="buttonSendLabel">
-                                <rect key="frame" x="257" y="212" width="54" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <state key="normal" title="S E N D">
+                                <state key="normal" image="customButton.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="buttonPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="MK5-fm-ynl"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="90p-dU-Mwm" secondAttribute="centerX" id="0id-gx-6Hs"/>
-                            <constraint firstItem="NqJ-Mb-c4n" firstAttribute="top" secondItem="Lk0-c8-ZMC" secondAttribute="bottom" constant="78" id="5F3-d8-MX5"/>
+                            <constraint firstItem="NqJ-Mb-c4n" firstAttribute="top" secondItem="Lk0-c8-ZMC" secondAttribute="bottom" constant="31" id="5F3-d8-MX5"/>
                             <constraint firstAttribute="bottom" secondItem="Y8B-sx-H1w" secondAttribute="bottom" id="AGZ-ym-igg"/>
                             <constraint firstItem="Rfu-vV-VNw" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" constant="20" symbolic="YES" id="EJw-vk-hRF"/>
-                            <constraint firstItem="Bqf-Lv-vr2" firstAttribute="centerX" secondItem="Y8B-sx-H1w" secondAttribute="centerX" id="EsB-eN-6kZ"/>
-                            <constraint firstItem="Bqf-Lv-vr2" firstAttribute="centerX" secondItem="Rfu-vV-VNw" secondAttribute="centerX" id="JoT-oX-qN6"/>
-                            <constraint firstItem="Bqf-Lv-vr2" firstAttribute="centerX" secondItem="Lk0-c8-ZMC" secondAttribute="centerX" id="KBM-eO-2nh"/>
-                            <constraint firstItem="NqJ-Mb-c4n" firstAttribute="top" secondItem="Bqf-Lv-vr2" secondAttribute="bottom" constant="36" id="Lba-3F-27i"/>
-                            <constraint firstItem="Bqf-Lv-vr2" firstAttribute="top" secondItem="90p-dU-Mwm" secondAttribute="bottom" constant="30" id="gNO-U4-n9L"/>
+                            <constraint firstItem="90p-dU-Mwm" firstAttribute="centerX" secondItem="Y8B-sx-H1w" secondAttribute="centerX" id="GVH-rC-HN2"/>
+                            <constraint firstItem="90p-dU-Mwm" firstAttribute="top" secondItem="Rfu-vV-VNw" secondAttribute="bottom" constant="30" id="ciE-dC-OAW"/>
                             <constraint firstItem="Y8B-sx-H1w" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="kTk-to-3BT"/>
                             <constraint firstItem="Y8B-sx-H1w" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" constant="-9" id="nku-HC-xKh"/>
                             <constraint firstItem="90p-dU-Mwm" firstAttribute="centerX" secondItem="Lk0-c8-ZMC" secondAttribute="centerX" id="qOs-T7-155"/>
                             <constraint firstAttribute="centerX" secondItem="Rfu-vV-VNw" secondAttribute="centerX" id="tYZ-Nv-eou"/>
                             <constraint firstItem="90p-dU-Mwm" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="20" symbolic="YES" id="wgr-uU-NOs"/>
                         </constraints>
-                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
-                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <connections>
-                        <outlet property="sendButton" destination="Lk0-c8-ZMC" id="Ylw-qx-M1y"/>
+                        <outlet property="currentLetter" destination="Rfu-vV-VNw" id="DuM-TC-nLJ"/>
+                        <outlet property="textInput" destination="90p-dU-Mwm" id="q7V-ae-ocq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
@@ -78,12 +70,12 @@
         </scene>
     </scenes>
     <resources>
+        <image name="customButton.png" width="120" height="120"/>
         <image name="ios-linen.jpg" width="2000" height="2000"/>
-        <image name="test.png" width="230" height="230"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
-        <simulatedScreenMetrics key="destination" type="retina4"/>
+        <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
 </document>

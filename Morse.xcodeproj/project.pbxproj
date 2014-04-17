@@ -9,9 +9,7 @@
 /* Begin PBXBuildFile section */
 		9EEA42E9C32C4E398D537CDF /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DEAAD2595CA4A7D8CC6E025 /* libPods.a */; };
 		D71562EE18FF300B0053D77A /* TorchController.m in Sources */ = {isa = PBXBuildFile; fileRef = D71562ED18FF300B0053D77A /* TorchController.m */; };
-		D71562F018FF3E490053D77A /* cancel.png in Resources */ = {isa = PBXBuildFile; fileRef = D71562EF18FF3E490053D77A /* cancel.png */; };
-		D75D3F6118FC90F1006E888F /* ring.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D75D3F6018FC90F1006E888F /* ring.jpg */; };
-		D75D3F6318FC9153006E888F /* test.png in Resources */ = {isa = PBXBuildFile; fileRef = D75D3F6218FC9153006E888F /* test.png */; };
+		D71D22831900299100067ABC /* cancel.png in Resources */ = {isa = PBXBuildFile; fileRef = D71D22821900299100067ABC /* cancel.png */; };
 		D77A0BAB18FC813300E7C2EF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D77A0BAA18FC813300E7C2EF /* Foundation.framework */; };
 		D77A0BAD18FC813300E7C2EF /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D77A0BAC18FC813300E7C2EF /* CoreGraphics.framework */; };
 		D77A0BAF18FC813300E7C2EF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D77A0BAE18FC813300E7C2EF /* UIKit.framework */; };
@@ -47,9 +45,7 @@
 		0DEAAD2595CA4A7D8CC6E025 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		D71562EC18FF300B0053D77A /* TorchController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TorchController.h; sourceTree = "<group>"; };
 		D71562ED18FF300B0053D77A /* TorchController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TorchController.m; sourceTree = "<group>"; };
-		D71562EF18FF3E490053D77A /* cancel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = cancel.png; path = ../../cancel.png; sourceTree = "<group>"; };
-		D75D3F6018FC90F1006E888F /* ring.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ring.jpg; sourceTree = "<group>"; };
-		D75D3F6218FC9153006E888F /* test.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = test.png; sourceTree = "<group>"; };
+		D71D22821900299100067ABC /* cancel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cancel.png; sourceTree = "<group>"; };
 		D77A0BA718FC813300E7C2EF /* Morse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Morse.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D77A0BAA18FC813300E7C2EF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D77A0BAC18FC813300E7C2EF /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -198,10 +194,8 @@
 		D77A0BE218FC824A00E7C2EF /* view */ = {
 			isa = PBXGroup;
 			children = (
-				D71562EF18FF3E490053D77A /* cancel.png */,
+				D71D22821900299100067ABC /* cancel.png */,
 				D79EE1FA18FDAD0A004A6D15 /* customButton.png */,
-				D75D3F6218FC9153006E888F /* test.png */,
-				D75D3F6018FC90F1006E888F /* ring.jpg */,
 				D77A0BBC18FC813300E7C2EF /* Main.storyboard */,
 				D77A0BDF18FC822500E7C2EF /* ios-linen.jpg */,
 				D77A0BB118FC813300E7C2EF /* Supporting Files */,
@@ -300,13 +294,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				D77A0BC318FC813300E7C2EF /* Images.xcassets in Resources */,
-				D75D3F6118FC90F1006E888F /* ring.jpg in Resources */,
 				D77A0BB518FC813300E7C2EF /* InfoPlist.strings in Resources */,
-				D71562F018FF3E490053D77A /* cancel.png in Resources */,
 				D77A0BE018FC822500E7C2EF /* ios-linen.jpg in Resources */,
+				D71D22831900299100067ABC /* cancel.png in Resources */,
 				D79EE1FB18FDAD0A004A6D15 /* customButton.png in Resources */,
 				D77A0BBE18FC813300E7C2EF /* Main.storyboard in Resources */,
-				D75D3F6318FC9153006E888F /* test.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

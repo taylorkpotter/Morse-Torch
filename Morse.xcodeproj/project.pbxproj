@@ -28,6 +28,7 @@
 		D79EE1FB18FDAD0A004A6D15 /* customButton.png in Resources */ = {isa = PBXBuildFile; fileRef = D79EE1FA18FDAD0A004A6D15 /* customButton.png */; };
 		D7D9156E18FDB6E80049A8FC /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7D9156D18FDB6E80049A8FC /* AVFoundation.framework */; };
 		D7D9157118FDC4D30049A8FC /* NSString+morseCode.m in Sources */ = {isa = PBXBuildFile; fileRef = D7D9157018FDC4D30049A8FC /* NSString+morseCode.m */; };
+		D7FDDEB219006BAD00695E96 /* MorseReceiverVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D7FDDEB119006BAD00695E96 /* MorseReceiverVC.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +71,8 @@
 		D7D9156D18FDB6E80049A8FC /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		D7D9156F18FDC4D30049A8FC /* NSString+morseCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+morseCode.h"; sourceTree = "<group>"; };
 		D7D9157018FDC4D30049A8FC /* NSString+morseCode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+morseCode.m"; sourceTree = "<group>"; };
+		D7FDDEB019006BAD00695E96 /* MorseReceiverVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MorseReceiverVC.h; sourceTree = "<group>"; };
+		D7FDDEB119006BAD00695E96 /* MorseReceiverVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MorseReceiverVC.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -181,12 +184,14 @@
 		D77A0BE118FC823A00E7C2EF /* controller */ = {
 			isa = PBXGroup;
 			children = (
-				D77A0BBF18FC813300E7C2EF /* ViewController.h */,
-				D77A0BC018FC813300E7C2EF /* ViewController.m */,
-				D71562EC18FF300B0053D77A /* TorchController.h */,
-				D71562ED18FF300B0053D77A /* TorchController.m */,
 				D77A0BB918FC813300E7C2EF /* AppDelegate.h */,
 				D77A0BBA18FC813300E7C2EF /* AppDelegate.m */,
+				D7FDDEB019006BAD00695E96 /* MorseReceiverVC.h */,
+				D7FDDEB119006BAD00695E96 /* MorseReceiverVC.m */,
+				D71562EC18FF300B0053D77A /* TorchController.h */,
+				D71562ED18FF300B0053D77A /* TorchController.m */,
+				D77A0BBF18FC813300E7C2EF /* ViewController.h */,
+				D77A0BC018FC813300E7C2EF /* ViewController.m */,
 			);
 			name = controller;
 			sourceTree = "<group>";
@@ -350,6 +355,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D7FDDEB219006BAD00695E96 /* MorseReceiverVC.m in Sources */,
 				D71562EE18FF300B0053D77A /* TorchController.m in Sources */,
 				D77A0BC118FC813300E7C2EF /* ViewController.m in Sources */,
 				D77A0BBB18FC813300E7C2EF /* AppDelegate.m in Sources */,

@@ -18,6 +18,8 @@
 
 + (NSDictionary *)dictionaryOfMorseSymbols:(NSString *)letterToTranslate;
 
+//+(NSString*) validateString:(NSString*) string;
+
 
 
 

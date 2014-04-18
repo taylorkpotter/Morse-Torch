@@ -9,15 +9,20 @@
 #import "MorseReceiverVC.h"
 #import  <AVFoundation/AVFoundation.h>
 #import <GPUImage/GPUImage.h>
+#import <SFGaugeView/SFGaugeView.h>
 
 
 
 
-@interface MorseReceiverVC ()
+@interface MorseReceiverVC () <SFGaugeViewDelegate>
 @property (strong, nonatomic) IBOutlet UILabel *luminLabel;
 @property (strong, nonatomic)GPUImageVideoCamera *videoCamera;
 @property (strong, nonatomic)NSString *luminValue;
+@property (weak, nonatomic) IBOutlet SFGaugeView *gaugeView;
 
+@property (nonatomic) BOOL flag;
+@property (strong, nonatomic) NSDate *startDate;
+@property (strong, nonatomic) NSDate *endDate;
 
 @end
 
@@ -35,8 +40,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
-  
+  self.gaugeView.maxlevel = 100;
 }
 
 
@@ -54,14 +58,61 @@
   
   [(GPUImageLuminosity *)lumin setLuminosityProcessingFinishedBlock:^(CGFloat luminosity, CMTime frameTime) {
    // Do something with the luminosity here
-    _luminValue = [NSString stringWithFormat:@"%f", luminosity];
-    NSLog(@"Lumin is %f", luminosity);
+   //  _luminValue = [NSString stringWithFormat:@"%f", luminosity];
+    
+//    if ([[NSThread currentThread]isMainThread]) {
+//      NSLog(@"Main thread...");
+//    } else {
+//      NSLog(@"Not main thread...");
+//    }
+    
+    dispatch_async(dispatch_get_main_queue(), ^{
+      _luminLabel.text = [NSString stringWithFormat:@"%f", luminosity];
+      // NSLog(@"%f", luminosity * 100);
+      
+      int intLevel = luminosity * 100;
+      self.gaugeView.currentLevel = luminosity * 100;
+      NSLog(@"%li", self.gaugeView.currentLevel);
+
+      
+      if (intLevel > 80) {
+      
+        // NSLog(@"%i", intLevel);
+  
+        if (!self.flag) {
+      
+         // Find out the start date...
+          self.startDate = [NSDate date];
+          
+          self.flag = YES;
+        }
+        
+      } else if (intLevel < 28) {
+        
+        
+          
+          // End date...
+          
+          NSTimeInterval timeSince = [[NSDate date]timeIntervalSinceDate:self.startDate];
+          
+        if (timeSince >= 2.5 && timeSince <= 3.3) {
+          NSLog(@"Its a freaking dash...");
+          timeSince = 0.0;
+        }
+          
+          self.flag = NO;
+        
+        
+      }
+      
+    });
     
   }];
 
   [_videoCamera startCameraCapture];
   
   NSLog(@"Testing is %@", _luminValue);
+  
 
 }
 
@@ -71,53 +122,9 @@
     // Dispose of any resources that can be recreated.
 }
 
-
-
-// //Run session setup after subviews are laid out.
-//- (void)viewDidLayoutSubviews
-//{
-//  // Create AVCaptureSession and set the quality of the output
-//  self.session = [[AVCaptureSession alloc] init];
-// self.session.sessionPreset = AVCaptureSessionPresetPhoto;
-//
-//// Get the Back Camera Device, init a AVCaptureDeviceInput linking the Device and add the input to the session.
-//  self.videoDevice = [self backCamera];
-//  self.videoInput = [AVCaptureDeviceInput deviceInputWithDevice:self.videoDevice error:nil];
-//  [self.session addInput:self.videoInput];
-//  
-////  // Insert code to add still image output here
-//
-//// Init the AVCaptureVideoPreviewLayer with our created session. Get the UIView layer
-//  AVCaptureVideoPreviewLayer *captureVideoPreviewLayer = [[AVCaptureVideoPreviewLayer alloc] initWithSession:self.session];
-//  CALayer *viewLayer = self.previewView.layer;
-//  
-////  // Set the AVCaptureVideoPreviewLayer bounds to the main view bounds and fill it accordingly. Add as sublayer to the main UIView
-//  [viewLayer setMasksToBounds:YES];
-//  captureVideoPreviewLayer.videoGravity = AVLayerVideoGravityResizeAspectFill;
-//  captureVideoPreviewLayer.frame = [viewLayer bounds];
-//  [viewLayer addSublayer:captureVideoPreviewLayer];
-//  
-//  // Start Running the Session
-//  [self.session startRunning];
-//}
-//
-//
-////// Utility Function to get the back camera device
-//- (AVCaptureDevice *)backCamera
-//{
-////  //Get all available devices, loop through and get the back position camera
-//  NSArray *devices = [AVCaptureDevice devicesWithMediaType:AVMediaTypeVideo];
-//  for (AVCaptureDevice *device in devices)
-//  {
-//    if ([device position] == AVCaptureDevicePositionBack)
-//    {
-//      return device;
-//    }
-//  }
-//  return nil;
-//}
-//
-
-
+- (void) sfGaugeView:(SFGaugeView*) gaugeView didChangeLevel:(NSInteger) level
+{
+  // NSLog(@"%li", self.gaugeView.currentLevel);
+}
 
 @end

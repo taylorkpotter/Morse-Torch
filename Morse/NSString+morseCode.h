@@ -14,11 +14,8 @@
 
 + (NSMutableArray *)translateMessageToMorse:(NSString *)inputText;
 
-//+ (NSString *)morseSymbolFromCharacter:(NSString *)character;
-
 + (NSDictionary *)dictionaryOfMorseSymbols:(NSString *)letterToTranslate;
 
-//+(NSString*) validateString:(NSString*) string;
 
 
 

@@ -10,7 +10,10 @@
 
 @protocol TorchControllerDelegate <NSObject>
 
--(void)sendingLetter:(NSString *)letter withProgress:(CGFloat)progress;
+@optional
+//-(void)displayNewLetter:(NSString *)newLetter;
+-(void)updateProgressBarWithTotal:(CGFloat)total andProgress:(CGFloat)progress;
+
 -(void)enableUIElements:(BOOL)enabled;
 
 

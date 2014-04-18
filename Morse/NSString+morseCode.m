@@ -20,13 +20,10 @@
   for(int i=0; i<inputText.length; i++) {
     NSString *letter = [inputText substringWithRange:NSMakeRange(i, 1)];
     [symbols addObject:[NSString dictionaryOfMorseSymbols:letter]];
-    
   }
-  
-  
-  
   return symbols;
 }
+
 
 
 + (NSString *)dictionaryOfMorseSymbols:(NSString *)letterToTranslate
@@ -71,6 +68,41 @@
   
   return [morseDictionary objectForKey:letterToTranslate];
 }
+
++(NSString *)symbolForLetter:(NSString *)letter
+{
+  NSDictionary *morseDict = @{@"A": @".-",
+                              @"B": @"-...",
+                              @"C":@"-.-.",
+                              @"D":@"-..",
+                              @"E":@".",
+                              @"F":@"..-.",
+                              @"G":@"--.",
+                              @"H":@"....",
+                              @"I":@"..",
+                              @"J":@".---",
+                              @"K":@"-.-",
+                              @"L":@".-..",
+                              @"M":@"--",
+                              @"N":@"-.",
+                              @"O":@"---",
+                              @"P":@".--.",
+                              @"Q":@"--.-",
+                              @"R":@".-.",
+                              @"S":@"...",
+                              @"T":@"-",
+                              @"U":@"..-",
+                              @"V":@"...-",
+                              @"W":@".--",
+                              @"X":@"-..-",
+                              @"Y":@"-.--",
+                              @"Z":@"--..",
+                              @" ":@" "
+                              };
+  
+  return [morseDict objectForKey:letter];
+}
+
 
 
 

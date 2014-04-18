@@ -6,9 +6,15 @@
 // project.
 
 
-// BKECircularProgressView
-#define COCOAPODS_POD_AVAILABLE_BKECircularProgressView
-#define COCOAPODS_VERSION_MAJOR_BKECircularProgressView 0
-#define COCOAPODS_VERSION_MINOR_BKECircularProgressView 2
-#define COCOAPODS_VERSION_PATCH_BKECircularProgressView 0
+// GPUImage
+#define COCOAPODS_POD_AVAILABLE_GPUImage
+#define COCOAPODS_VERSION_MAJOR_GPUImage 0
+#define COCOAPODS_VERSION_MINOR_GPUImage 1
+#define COCOAPODS_VERSION_PATCH_GPUImage 4
+
+// SFGaugeView
+#define COCOAPODS_POD_AVAILABLE_SFGaugeView
+#define COCOAPODS_VERSION_MAJOR_SFGaugeView 0
+#define COCOAPODS_VERSION_MINOR_SFGaugeView 0
+#define COCOAPODS_VERSION_PATCH_SFGaugeView 6
 

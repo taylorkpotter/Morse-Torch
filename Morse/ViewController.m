@@ -9,15 +9,16 @@
 #import "ViewController.h"
 #import "NSString+morseCode.h"
 #import "TorchController.h"
-#import  <BKECircularProgressView/BKECircularProgressView.h>
 #import  <QuartzCore/QuartzCore.h>
+#import "LDProgressView.h"
+#import "UIColor+RGBValues.h"
 
 @interface ViewController () <UITextFieldDelegate, TorchControllerDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *textInput;
 @property (weak, nonatomic) IBOutlet UIButton *sendButton;
 @property (weak, nonatomic) IBOutlet UILabel *currentLetter;
 @property (strong, nonatomic)TorchController *torchController;
-@property (strong, nonatomic)BKECircularProgressView *progressView;
+@property (strong, nonatomic)LDProgressView *progressView;
 
 
 @end
@@ -42,7 +43,8 @@
 -(void)viewWillAppear:(BOOL)animated
 {
   [super viewWillAppear:animated];
-  [self setupProgressView];
+  [self showProgressBar];
+
 }
 - (void)didReceiveMemoryWarning
 {
@@ -103,23 +105,27 @@
     
   }
 }
-- (void)setupProgressView
+
+-(void)updateProgressBarWithTotal:(CGFloat)total andProgress:(CGFloat)progress
+
 {
-  _progressView = [[BKECircularProgressView alloc]initWithFrame:_sendButton.bounds];
-  _progressView.progressTintColor = [UIColor redColor];
-  _progressView.backgroundTintColor = [UIColor lightGrayColor];
-  _progressView.lineWidth = 3.0;
-  [_sendButton addSubview:_progressView];
-  [_progressView setUserInteractionEnabled:NO];
+
+  _progressView.progress = progress / total;
+  NSLog(@"%f", _progressView.progress);
+
 }
 
--(void)sendingLetter:(NSString *)letter withProgress:(CGFloat)progress;
+-(void)showProgressBar
+
 {
-  [[NSOperationQueue mainQueue]addOperationWithBlock:^{
-    NSLog(@"%f", progress);
-    [_progressView setProgress:progress];
-  }];
+  _progressView = [[LDProgressView alloc] initWithFrame:CGRectMake(20, 145, self.view.frame.size.width-40, 5)];
+  _progressView.progress = 0.0;
+  _progressView.borderRadius = @0;
+  _progressView.type = LDProgressStripes;
+  _progressView.color = [UIColor redColor];
+  [self.view addSubview:_progressView];
 }
+
 
 
 

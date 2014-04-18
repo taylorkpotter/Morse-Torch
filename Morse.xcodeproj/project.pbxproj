@@ -7,9 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9EEA42E9C32C4E398D537CDF /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DEAAD2595CA4A7D8CC6E025 /* libPods.a */; };
+		5C00D7F623EB459485C23955 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D43EB26441804C1C8433978D /* libPods.a */; };
+		9EEA42E9C32C4E398D537CDF /* (null) in Frameworks */ = {isa = PBXBuildFile; };
 		D71562EE18FF300B0053D77A /* TorchController.m in Sources */ = {isa = PBXBuildFile; fileRef = D71562ED18FF300B0053D77A /* TorchController.m */; };
 		D71D22831900299100067ABC /* cancel.png in Resources */ = {isa = PBXBuildFile; fileRef = D71D22821900299100067ABC /* cancel.png */; };
+		D768B7921900910600E86D4A /* LDProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = D768B78F1900910600E86D4A /* LDProgressView.m */; };
+		D768B7931900910600E86D4A /* UIColor+RGBValues.m in Sources */ = {isa = PBXBuildFile; fileRef = D768B7911900910600E86D4A /* UIColor+RGBValues.m */; };
 		D77A0BAB18FC813300E7C2EF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D77A0BAA18FC813300E7C2EF /* Foundation.framework */; };
 		D77A0BAD18FC813300E7C2EF /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D77A0BAC18FC813300E7C2EF /* CoreGraphics.framework */; };
 		D77A0BAF18FC813300E7C2EF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D77A0BAE18FC813300E7C2EF /* UIKit.framework */; };
@@ -29,6 +32,8 @@
 		D7D9156E18FDB6E80049A8FC /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7D9156D18FDB6E80049A8FC /* AVFoundation.framework */; };
 		D7D9157118FDC4D30049A8FC /* NSString+morseCode.m in Sources */ = {isa = PBXBuildFile; fileRef = D7D9157018FDC4D30049A8FC /* NSString+morseCode.m */; };
 		D7FDDEB219006BAD00695E96 /* MorseReceiverVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D7FDDEB119006BAD00695E96 /* MorseReceiverVC.m */; };
+		D7FDDEB419007DAC00695E96 /* cameraflash.png in Resources */ = {isa = PBXBuildFile; fileRef = D7FDDEB319007DAC00695E96 /* cameraflash.png */; };
+		D7FDDEB619007EF600695E96 /* RECEIVEButton.png in Resources */ = {isa = PBXBuildFile; fileRef = D7FDDEB519007EF600695E96 /* RECEIVEButton.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,11 +47,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		07D484D00E664A39A075D791 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
-		0DEAAD2595CA4A7D8CC6E025 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		C762D3738C5D4E259C6C8E11 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		D43EB26441804C1C8433978D /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		D71562EC18FF300B0053D77A /* TorchController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TorchController.h; sourceTree = "<group>"; };
 		D71562ED18FF300B0053D77A /* TorchController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TorchController.m; sourceTree = "<group>"; };
 		D71D22821900299100067ABC /* cancel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cancel.png; sourceTree = "<group>"; };
+		D768B78E1900910600E86D4A /* LDProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LDProgressView.h; path = Morse/LDProgressView.h; sourceTree = "<group>"; };
+		D768B78F1900910600E86D4A /* LDProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LDProgressView.m; path = Morse/LDProgressView.m; sourceTree = "<group>"; };
+		D768B7901900910600E86D4A /* UIColor+RGBValues.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIColor+RGBValues.h"; path = "Morse/UIColor+RGBValues.h"; sourceTree = "<group>"; };
+		D768B7911900910600E86D4A /* UIColor+RGBValues.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIColor+RGBValues.m"; path = "Morse/UIColor+RGBValues.m"; sourceTree = "<group>"; };
 		D77A0BA718FC813300E7C2EF /* Morse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Morse.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D77A0BAA18FC813300E7C2EF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D77A0BAC18FC813300E7C2EF /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -69,10 +78,12 @@
 		D77A0BDF18FC822500E7C2EF /* ios-linen.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "ios-linen.jpg"; sourceTree = "<group>"; };
 		D79EE1FA18FDAD0A004A6D15 /* customButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = customButton.png; sourceTree = "<group>"; };
 		D7D9156D18FDB6E80049A8FC /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
-		D7D9156F18FDC4D30049A8FC /* NSString+morseCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+morseCode.h"; sourceTree = "<group>"; };
-		D7D9157018FDC4D30049A8FC /* NSString+morseCode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+morseCode.m"; sourceTree = "<group>"; };
+		D7D9156F18FDC4D30049A8FC /* NSString+morseCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+morseCode.h"; path = "Morse/NSString+morseCode.h"; sourceTree = "<group>"; };
+		D7D9157018FDC4D30049A8FC /* NSString+morseCode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+morseCode.m"; path = "Morse/NSString+morseCode.m"; sourceTree = "<group>"; };
 		D7FDDEB019006BAD00695E96 /* MorseReceiverVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MorseReceiverVC.h; sourceTree = "<group>"; };
 		D7FDDEB119006BAD00695E96 /* MorseReceiverVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MorseReceiverVC.m; sourceTree = "<group>"; };
+		D7FDDEB319007DAC00695E96 /* cameraflash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cameraflash.png; sourceTree = "<group>"; };
+		D7FDDEB519007EF600695E96 /* RECEIVEButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = RECEIVEButton.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,7 +95,8 @@
 				D77A0BAD18FC813300E7C2EF /* CoreGraphics.framework in Frameworks */,
 				D77A0BAF18FC813300E7C2EF /* UIKit.framework in Frameworks */,
 				D77A0BAB18FC813300E7C2EF /* Foundation.framework in Frameworks */,
-				9EEA42E9C32C4E398D537CDF /* libPods.a in Frameworks */,
+				9EEA42E9C32C4E398D537CDF /* (null) in Frameworks */,
+				5C00D7F623EB459485C23955 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -105,17 +117,39 @@
 			isa = PBXGroup;
 			children = (
 				D7D9156D18FDB6E80049A8FC /* AVFoundation.framework */,
-				0DEAAD2595CA4A7D8CC6E025 /* libPods.a */,
+				D43EB26441804C1C8433978D /* libPods.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D768B794190093BA00E86D4A /* pods */ = {
+			isa = PBXGroup;
+			children = (
+				D768B78E1900910600E86D4A /* LDProgressView.h */,
+				D768B78F1900910600E86D4A /* LDProgressView.m */,
+				D768B7901900910600E86D4A /* UIColor+RGBValues.h */,
+				D768B7911900910600E86D4A /* UIColor+RGBValues.m */,
+			);
+			name = pods;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		D768B7951900A38B00E86D4A /* categories */ = {
+			isa = PBXGroup;
+			children = (
+				D7D9156F18FDC4D30049A8FC /* NSString+morseCode.h */,
+				D7D9157018FDC4D30049A8FC /* NSString+morseCode.m */,
+			);
+			name = categories;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		D77A0B9E18FC813300E7C2EF = {
 			isa = PBXGroup;
 			children = (
 				D77A0BB018FC813300E7C2EF /* Morse */,
-				07D484D00E664A39A075D791 /* Pods.xcconfig */,
 				8748B032ECAD48E2B8B4D7E4 /* Frameworks */,
+				C762D3738C5D4E259C6C8E11 /* Pods.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -144,6 +178,8 @@
 		D77A0BB018FC813300E7C2EF /* Morse */ = {
 			isa = PBXGroup;
 			children = (
+				D768B794190093BA00E86D4A /* pods */,
+				D768B7951900A38B00E86D4A /* categories */,
 				D77A0BE318FC828200E7C2EF /* model */,
 				D77A0BE118FC823A00E7C2EF /* controller */,
 				D77A0BE218FC824A00E7C2EF /* view */,
@@ -186,12 +222,6 @@
 			children = (
 				D77A0BB918FC813300E7C2EF /* AppDelegate.h */,
 				D77A0BBA18FC813300E7C2EF /* AppDelegate.m */,
-				D7FDDEB019006BAD00695E96 /* MorseReceiverVC.h */,
-				D7FDDEB119006BAD00695E96 /* MorseReceiverVC.m */,
-				D71562EC18FF300B0053D77A /* TorchController.h */,
-				D71562ED18FF300B0053D77A /* TorchController.m */,
-				D77A0BBF18FC813300E7C2EF /* ViewController.h */,
-				D77A0BC018FC813300E7C2EF /* ViewController.m */,
 			);
 			name = controller;
 			sourceTree = "<group>";
@@ -199,10 +229,12 @@
 		D77A0BE218FC824A00E7C2EF /* view */ = {
 			isa = PBXGroup;
 			children = (
-				D71D22821900299100067ABC /* cancel.png */,
-				D79EE1FA18FDAD0A004A6D15 /* customButton.png */,
+				D7FDDEB019006BAD00695E96 /* MorseReceiverVC.h */,
+				D7FDDEB119006BAD00695E96 /* MorseReceiverVC.m */,
+				D77A0BBF18FC813300E7C2EF /* ViewController.h */,
+				D77A0BC018FC813300E7C2EF /* ViewController.m */,
+				D7FDDEB719007EF900695E96 /* images */,
 				D77A0BBC18FC813300E7C2EF /* Main.storyboard */,
-				D77A0BDF18FC822500E7C2EF /* ios-linen.jpg */,
 				D77A0BB118FC813300E7C2EF /* Supporting Files */,
 				D77A0BA818FC813300E7C2EF /* Products */,
 				D77A0BA918FC813300E7C2EF /* Frameworks */,
@@ -214,10 +246,22 @@
 		D77A0BE318FC828200E7C2EF /* model */ = {
 			isa = PBXGroup;
 			children = (
-				D7D9156F18FDC4D30049A8FC /* NSString+morseCode.h */,
-				D7D9157018FDC4D30049A8FC /* NSString+morseCode.m */,
+				D71562EC18FF300B0053D77A /* TorchController.h */,
+				D71562ED18FF300B0053D77A /* TorchController.m */,
 			);
 			name = model;
+			sourceTree = "<group>";
+		};
+		D7FDDEB719007EF900695E96 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				D7FDDEB519007EF600695E96 /* RECEIVEButton.png */,
+				D7FDDEB319007DAC00695E96 /* cameraflash.png */,
+				D71D22821900299100067ABC /* cancel.png */,
+				D79EE1FA18FDAD0A004A6D15 /* customButton.png */,
+				D77A0BDF18FC822500E7C2EF /* ios-linen.jpg */,
+			);
+			name = images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -227,11 +271,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D77A0BD918FC813400E7C2EF /* Build configuration list for PBXNativeTarget "Morse" */;
 			buildPhases = (
-				84537CA3E6DB454AB23DA5F0 /* Check Pods Manifest.lock */,
+				3273FD2DAA8D445EAC8FBA05 /* Check Pods Manifest.lock */,
 				D77A0BA318FC813300E7C2EF /* Sources */,
 				D77A0BA418FC813300E7C2EF /* Frameworks */,
 				D77A0BA518FC813300E7C2EF /* Resources */,
-				E131B3FE96F24D3A9878EB33 /* Copy Pods Resources */,
+				0B7BABF7696C4553BFAFA6BC /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -301,7 +345,9 @@
 				D77A0BC318FC813300E7C2EF /* Images.xcassets in Resources */,
 				D77A0BB518FC813300E7C2EF /* InfoPlist.strings in Resources */,
 				D77A0BE018FC822500E7C2EF /* ios-linen.jpg in Resources */,
+				D7FDDEB619007EF600695E96 /* RECEIVEButton.png in Resources */,
 				D71D22831900299100067ABC /* cancel.png in Resources */,
+				D7FDDEB419007DAC00695E96 /* cameraflash.png in Resources */,
 				D79EE1FB18FDAD0A004A6D15 /* customButton.png in Resources */,
 				D77A0BBE18FC813300E7C2EF /* Main.storyboard in Resources */,
 			);
@@ -318,22 +364,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		84537CA3E6DB454AB23DA5F0 /* Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		E131B3FE96F24D3A9878EB33 /* Copy Pods Resources */ = {
+		0B7BABF7696C4553BFAFA6BC /* Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -348,6 +379,21 @@
 			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		3273FD2DAA8D445EAC8FBA05 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -356,6 +402,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				D7FDDEB219006BAD00695E96 /* MorseReceiverVC.m in Sources */,
+				D768B7931900910600E86D4A /* UIColor+RGBValues.m in Sources */,
+				D768B7921900910600E86D4A /* LDProgressView.m in Sources */,
 				D71562EE18FF300B0053D77A /* TorchController.m in Sources */,
 				D77A0BC118FC813300E7C2EF /* ViewController.m in Sources */,
 				D77A0BBB18FC813300E7C2EF /* AppDelegate.m in Sources */,
@@ -482,7 +530,7 @@
 		};
 		D77A0BDA18FC813400E7C2EF /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 07D484D00E664A39A075D791 /* Pods.xcconfig */;
+			baseConfigurationReference = C762D3738C5D4E259C6C8E11 /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -496,7 +544,7 @@
 		};
 		D77A0BDB18FC813400E7C2EF /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 07D484D00E664A39A075D791 /* Pods.xcconfig */;
+			baseConfigurationReference = C762D3738C5D4E259C6C8E11 /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;

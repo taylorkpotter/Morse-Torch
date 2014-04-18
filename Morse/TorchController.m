@@ -14,6 +14,8 @@
 
 @property (strong, nonatomic) AVCaptureDevice *myDevice;
 @property (strong, nonatomic) NSString *morseLetter;
+@property (nonatomic) CGFloat totalSymbol;
+@property (nonatomic) CGFloat symbolIndex;
 
 @end
 @implementation TorchController
@@ -24,6 +26,8 @@
   self.myDevice = [AVCaptureDevice defaultDeviceWithMediaType:AVMediaTypeVideo];
   self.flashQueue = [NSOperationQueue new];
   self.flashQueue.maxConcurrentOperationCount = 1;
+  self.totalSymbol = 0;
+  self.symbolIndex = 0;
   
   return self;
 }
@@ -73,27 +77,39 @@
   
   for (NSString *symbolLetter in translatedArray) {
     _morseLetter = symbolLetter;
-    [self.flashQueue addOperationWithBlock:^{
-      
-      CGFloat progress = (CGFloat)[translatedArray indexOfObject:symbolLetter] / (CGFloat)translatedArray.count;
-      
-      [self.delegate sendingLetter:symbolLetter withProgress:progress];
-    }];
     for(int i=0; i<_morseLetter.length; i++) {
       NSString *letter = [_morseLetter substringWithRange:NSMakeRange(i, 1)];
       if ([letter isEqualToString:@"."]) {
+        _totalSymbol++;
         [self.flashQueue addOperationWithBlock:^{
+          _symbolIndex++;
+          [[NSOperationQueue mainQueue]addOperationWithBlock:^{
+            [self.delegate updateProgressBarWithTotal:_totalSymbol andProgress:_symbolIndex];
+          }];
           [self flashDot];
         }];
       } else if ([letter isEqualToString:@"-"]) {
+        _totalSymbol++;
         [self.flashQueue addOperationWithBlock:^{
+          _symbolIndex++;
+          [[NSOperationQueue mainQueue]addOperationWithBlock:^{
+            [self.delegate updateProgressBarWithTotal:_totalSymbol andProgress:_symbolIndex];
+          }];
           [self flashDash];
         }];
       } else if ([letter isEqualToString:@" "]) {
+        _totalSymbol++;
+        
         [self.flashQueue addOperationWithBlock:^{
+          _symbolIndex++;
+          [[NSOperationQueue mainQueue]addOperationWithBlock:^{
+            [self.delegate updateProgressBarWithTotal:_totalSymbol andProgress:_symbolIndex];
+          }];
           [self flashLetterSpace];
         }];
         [self.flashQueue addOperationWithBlock:^{
+
+          
           [self flashLetterSpace];
         }];
         
@@ -101,10 +117,17 @@
     }
     
   }
+  
   [self.flashQueue addOperationWithBlock:^{
+    _symbolIndex = 0;
     [self.delegate enableUIElements:NO];
   }];
-
 }
+
+//-(void)cancelSending
+//{
+//  [self.flashQueue cancelAllOperations];
+//}
+
 
 @end

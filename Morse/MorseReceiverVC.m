@@ -77,7 +77,7 @@
       
       if (intLevel > 80) {
       
-        // NSLog(@"%i", intLevel);
+      NSLog(@"%i", intLevel);
   
         if (!self.flag) {
       
